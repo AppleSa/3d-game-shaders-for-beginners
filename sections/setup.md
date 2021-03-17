@@ -4,19 +4,19 @@
 [:arrow_down_small:](#copyright)
 [:arrow_forward:](building-the-demo.md)
 
-# 3D Game Shaders For Beginners
+# 3D 游戏着色器初学
 
-## Setup
+## 设置
 
 <p align="center">
-<img src="https://i.imgur.com/fYpIWNk.gif" alt="Setup" title="Setup">
+<img src="https://i.imgur.com/fYpIWNk.gif" alt="设置" title="设置">
 </p>
 
-Below is the setup used to develop and test the example code.
+以下是用于开发和测试示例代码的设置。
 
-### Environment
+### 环境
 
-The example code was developed and tested using the following environment.
+示例代码是使用以下环境开发和测试的。
 
 - Linux manjaro 4.9.135-1-MANJARO
 - OpenGL renderer string: GeForce GTX 970/PCIe/SSE2
@@ -24,29 +24,28 @@ The example code was developed and tested using the following environment.
 - g++ (GCC) 8.2.1 20180831
 - Panda3D 1.10.1-1
 
-### Materials
+### 材质
 
-Each [Blender](https://blender.org) material used to build `mill-scene.egg` has five textures
-in the following order.
+用于构建 `mill-scene.egg` 的每种 [Blender](https://blender.org) 材料都具有按照下面顺序的五种纹理
 
-- Diffuse
-- Normal
-- Specular
-- Reflection
-- Refraction
+- Diffuse [扩散]
+- Normal  [默认]
+- Specular [高光]
+- Reflection [反射]
+- Refraction [折射]
 
-By having the same maps in the same positions for all models,
-the shaders can be generalized, reducing the need to duplicate code.
+所有模型的相同位置都有相同的贴图，
+着色器可以通用化，减少了重复代码的需要。
 
-If an object uses its vertex normals, a "flat blue" normal map is used.
+如果一个对象使用其顶点法线，则使用“浅蓝色”法线贴图。
 
 <p align="center">
-<img src="https://i.imgur.com/tFmKgoH.png" alt="A flat normal map." title="A flat normal map.">
+<img src="https://i.imgur.com/tFmKgoH.png" alt="平面法线贴图" title="平面法线贴图">
 </p>
 
-Here is an example of a flat normal map.
-The only color it contains is flat blue `(red = 128, green = 128, blue = 255)`.
-This color represents a unit (length one) normal pointing in the positive z-axis `(0, 0, 1)`.
+这是平面法线贴图的示例。
+它包含的唯一颜色是纯蓝色 `(red = 128, green = 128, blue = 255)`.
+这个颜色代表了一个单位（长度为 1）在正z轴通常的指向 `(0, 0, 1)`.
 
 ```c
 (0, 0, 1) =
@@ -62,13 +61,13 @@ This color represents a unit (length one) normal pointing in the positive z-axis
         (0, 0, 1)
 ```
 
-Here you see the unit normal `(0, 0, 1)`
-converted to flat blue `(128, 128, 255)`
-and flat blue converted to the unit normal.
-You'll learn more about this in the [normal mapping](normal-mapping.md) technique.
+这里的看到的单位 `(0, 0, 1)`
+转换为RGB的浅蓝色 `(128, 128, 255)`
+并将浅蓝色转换为单位法线。
+你将通过 [法线贴图](normal-mapping.md) 进一步了解这一点
 
 <p align="center">
-<img src="https://i.imgur.com/R9FgZKx.png" alt="Specular Map" title="Specular Map">
+<img src="https://i.imgur.com/R9FgZKx.png" alt="镜面贴图" title="镜面贴图">
 </p>
 
 Up above is one of the specular maps used.

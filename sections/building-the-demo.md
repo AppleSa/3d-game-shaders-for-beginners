@@ -4,27 +4,25 @@
 [:arrow_down_small:](#copyright)
 [:arrow_forward:](running-the-demo.md)
 
-# 3D Game Shaders For Beginners
+# 3D 游戏着色器初学
 
-## Building The Demo
+## 构建示例
 
 <p align="center">
 <img src="https://i.imgur.com/PQcDnIu.gif" alt="Building The Demo" title="Building The Demo">
 </p>
 
-Before you can try out the demo program, you'll have to build the example code first.
+在您尝试示例程序之前，您必须先构建示例代码。
 
-### Dependencies
+### 依赖项
 
-Before you can compile the example code, you'll need to install
-[Panda3D](https://www.panda3d.org/)
-for your platform.
-Panda3D is available for Linux, Mac, and Windows.
+在编译示例代码之前，您需要为您的平台安装 [Panda3D](https://www.panda3d.org/)。
+Panda3D可用于Linux、Mac和Windows。
 
 ### Linux
 
-Start by [installing](https://www.panda3d.org/manual/?title=Installing_Panda3D_in_Linux) the
-[Panda3D SDK](https://www.panda3d.org/download/sdk-1-10-1/) for your distribution.
+首先 [安装](https://www.panda3d.org/manual/?title=Installing_Panda3D_in_Linux) 你的发行版的
+[Panda3D SDK](https://www.panda3d.org/download/sdk-1-10-1/)。
 
 Make sure to locate where the Panda3D headers and libraries are.
 The headers and libraries are most likely in `/usr/include/panda3d/` and `/usr/lib/panda3d/` respectively.
